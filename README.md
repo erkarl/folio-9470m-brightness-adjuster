@@ -17,9 +17,10 @@ Add script to your $PATH
 
 Usage
 ---------------------
-'python adjust_brightness.py {{brightness_value}}'
+'brightness {{brightness_value}}'
 
-Example: 'python adjust_brigthness.py 1500'
+Example: 'brightness 1500'
+Example2: 'brightness max'
 
 {{brigthness_value}} == integer from 0 to 3484
 
