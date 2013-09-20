@@ -1,0 +1,32 @@
+#!/usr/bin/python
+"""
+This script will adjust brightness on HP Folio EliteBook 9470m
+running Ubuntu 12.04 LTS.
+
+Usage: 'python adjust_brightness.py {{brightness_value}}'
+Example: 'python adjust_brigthness.py 1500'
+{{brigthness_value}} == integer from 0 to 3484
+
+Last modified: 20.09.2013
+Karl Ranna - karl@karlranna.com
+"""
+import sys
+import os
+
+class AdjustBrightness():
+
+    def change_brightness(self, *args, **kwargs):
+	try:
+	    # Get the command line argument as brightness value
+	    brightness_value = sys.argv[1]
+	    if brightness_value == 'max':
+	        brightness_value = '3484'
+	    # Combine it into a full command
+	    system_exec = "sudo bash -c 'echo " + brightness_value + " > /sys/class/backlight/intel_backlight/brightness'" 
+	    # Execute it
+	    os.system(system_exec)
+	except:
+	    os.system("sudo bash -c 'echo 1500 > /sys/class/backlight/intel_backlight/brightness'")
+
+adjust_brigthness = AdjustBrightness()
+adjust_brigthness.change_brightness()
