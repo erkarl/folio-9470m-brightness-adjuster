@@ -5,23 +5,41 @@ Brigthness adjuster for HP EliteBook Folio 9470m on Ubuntu 12.04 LTS
 
 Add script to your $PATH 
 ---------------------
--make a new directory for scripts if you haven't already (mkdir ~/bin)
+Make a new directory for scripts if you haven't already 
+```console
+mkdir ~/bin
+```
 
--copy the script to your scripts directory (cp brightness ~/bin/brightness)
+Copy the script to your scripts directory 
+```console
+cp brightness ~/bin/brightness
+```
 
--give the script proper permissions (chmod +rx ~/bin/brightness)
+Give the script proper permissions 
+```console
+chmod +rx ~/bin/brightness
+```
 
--open .bashrc in some text editor (vim ~/.bashrc)
+Open .bashrc in some text editor 
+```console
+vim ~/.bashrc
+```
 
--insert the following line (export PATH=$PATH:$HOME/bin)
+Insert the following line to add scripts directory to your PATH
+```console
+export PATH=$PATH:$HOME/bin
+```
 
 Usage
 ---------------------
+```console
 'brightness {{brightness_value}}'
+```
 
-Example: 'brightness 1500'
-Example2: 'brightness max'
+Examples
+```console
+'brightness 1500'
+'brightness max'
+```
 
 {{brigthness_value}} == integer from 0 to 3484
-
-
